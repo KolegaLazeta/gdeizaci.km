@@ -38,7 +38,8 @@ class MusicianController extends Controller
         $request->validate([
             'name'=>'required',
             'description'=>'required',
-            'image' => 'required'
+            'image' => 'required',
+            'socialMedia' => ''
         ]);
         
         $data = $request->all();

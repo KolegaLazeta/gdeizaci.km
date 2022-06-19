@@ -17,6 +17,7 @@ class Musicians extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
+            $table->string('socialMedia');
             $table->string('image');
             
             $table->timestamps();

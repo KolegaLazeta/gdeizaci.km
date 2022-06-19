@@ -39,7 +39,9 @@ class PlaceController extends Controller
         $request->validate([
             'name'=>'required',
             'description'=>'required',
-            'image' => 'required'
+            'phone' => 'required',
+            'map' => 'required',
+            'image' => 'required',
         ]);
         
         $data = $request->all();

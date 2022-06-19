@@ -34,7 +34,7 @@
                             <a href="{{ route('place.id', $place) }}">
                                 <div class="card mt-3">
                                     <div class="card-img-top">
-                                        <img src="/storage/uploads/{{ $place->image }}" style="object-fit:cover" height="200" width="300" alt="">
+                                        <img src="/storage/uploads/{{ $place->image }}" style="object-fit:cover" height="200" width="350" alt="">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $place->name }}</h5>

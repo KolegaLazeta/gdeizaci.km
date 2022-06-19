@@ -17,6 +17,8 @@ class Places extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
+            $table->string('phone');
+            $table->string('map');
             $table->string('image');
             
             $table->timestamps();

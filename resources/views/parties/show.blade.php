@@ -14,9 +14,7 @@
                     <div class="description pt-3">
                         <p>{{$party->description}}</p>
                     </div>
-                    <div class="menu">
-                        <a href="">Cenovnik</a>
-                    </div>
+                    
                     <div class="musician">
                         <strong>Muzicar: </strong><a href="{{ route('musician.id', $party->musician) }}">{{ $party->musician->name }}</a> 
                     </div>
@@ -24,7 +22,7 @@
                         <p><strong>Maximalni broj osoba: </strong>{{ $party->maxGuests }}</p>
                     </div>
                     <div class="phoneNumber">
-                        <p><strong>Broj telefona: </strong></p>
+                        <p><strong>Broj telefona: {{ $party->place->phone }} </strong></p>
                     </div>
 
                     <div class="booking">

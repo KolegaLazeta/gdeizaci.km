@@ -1,12 +1,6 @@
 @extends('layouts.admin')
 @section('main')
-<div class="row">
-    @if(session()->has('message'))
-    <div class="alert {{session('alert') ?? 'alert-info'}}">
-        {{ session('message') }}
-    </div>
-    @endif
-</div>
+
 <form action="{{ route('store.place') }}" enctype="multipart/form-data" method="post">
     @csrf
     <div class="row">
@@ -38,6 +32,30 @@
                 @enderror
             </div>
 
+
+            <div class="form-group row">
+                <label for="phone" class="col-md-4 col-form-label">Broj Telefona</label>
+                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" 
+                name="phone" value="{{ old('phone') }}" autocomplete="phone" autofocus>
+                @error('phone')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+
+            <div class="form-group row">
+                <label for="map" class="col-md-4 col-form-label">Link objekta: </label>
+                <input id="map" type="map" class="form-control @error('map') is-invalid @enderror" 
+                name="map" value="{{ old('map') }}" autocomplete="map" autofocus>
+                @error('map')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+
+            
             <div class="form-gorup row">
                 <label for="image" class="col-md-4 col-form-label">Slika objekata</label>
                 <input type="file" class="form-control-file" id="image" name="image">

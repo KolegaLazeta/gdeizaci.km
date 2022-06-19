@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e38664dc2e1313269ea0f10ec8cbadf",
+    "content-hash": "b30f3131294cdc2f3d6280376e4d31f9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5292,6 +5292,65 @@
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
+            "name": "tinymce/tinymce",
+            "version": "6.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tinymce/tinymce-dist.git",
+                "reference": "9563ee68e845cc256cc371a6c76a750a4bab7c15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/9563ee68e845cc256cc371a6c76a750a4bab7c15",
+                "reference": "9563ee68e845cc256cc371a6c76a750a4bab7c15",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "tinymce.js",
+                        "plugins/*/plugin.js",
+                        "themes/*/theme.js",
+                        "models/*/model.js",
+                        "icons/*/icons.js"
+                    ],
+                    "files": [
+                        "tinymce.min.js",
+                        "plugins/*/plugin.min.js",
+                        "themes/*/theme.min.js",
+                        "models/*/model.min.js",
+                        "skins/**",
+                        "icons/*/icons.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT-only"
+            ],
+            "description": "Web based JavaScript HTML WYSIWYG editor control.",
+            "homepage": "https://www.tiny.cloud/",
+            "keywords": [
+                "contenteditable",
+                "editing",
+                "html",
+                "javascript",
+                "rich editor",
+                "rich text",
+                "rich text editor",
+                "richtext",
+                "rte",
+                "text",
+                "tinymce",
+                "wysiwyg"
+            ],
+            "support": {
+                "source": "https://github.com/tinymce/tinymce-dist/tree/6.0.3"
+            },
+            "time": "2022-05-25T04:10:33+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.4.0",
             "source": {
@@ -8014,5 +8073,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

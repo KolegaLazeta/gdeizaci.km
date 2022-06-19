@@ -1,8 +1,12 @@
 @extends('layouts.app')
 @section('main')
 <style>
+    #cards:hover{
+        transform: scale(1.1)
+    }
     .tabcontent {
   display: none;
+
 }
 </style>
 <div class="container">
@@ -46,10 +50,9 @@
                 @foreach ($thisWeek as $party)
                 
                     <div class="card mt-2" style="width: 18rem;">
-                        <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
-                        <div class="card-body">
-                        <p class="card-text">{{ $party->title }}</p>
-                        </div>
+                        <a href="{{ route('party.id', $party) }}">
+                            <img class="card-img-top" id="cards" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
+                        </a>
                     </div>    
                 
 
@@ -83,13 +86,14 @@
                 <div class="tabcontent" id="pon">
                     <div class="content-list d-flex justify-content-between">
                         <div class="content m-4">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
-                                <div class="card-body d-flex">
-                                    <div class="card-title">{{Str::limit($party->title, 20) }}</div>
-                                    <a href="{{ route('party.id', $party) }}" class="btn btn-outline-dark m-auto">Rezervisi</a>
+                            <a href="{{ route('party.id', $party) }}">
+                                <div class="card" id="cards" style="width: 18rem;">
+                                    <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
+                                    <div class="card-body d-flex">
+                                        <div class="card-title">{{Str::limit($party->title, 30) }}</div>
+                                    </div>
                                 </div>
-                              </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -98,13 +102,15 @@
                 <div class="tabcontent" id="sre">
                     <div class="content-list d-flex justify-content-between">
                         <div class="content m-4">
-                            <div class="card" style="width: 18rem;">
+                            <a href="{{ route('party.id', $party) }}">
+                            <div class="card" id="cards" style="width: 18rem;">
                                 <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
                                 <div class="card-body d-flex">
-                                    <div class="card-title">{{Str::limit($party->title, 20) }}</div>
-                                    <a href="{{ route('party.id', $party) }}" class="btn btn-outline-dark m-auto">Rezervisi</a>
+                                    <div class="card-title">{{Str::limit($party->title, 30) }}</div>
+                                    
                                 </div>
                               </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -113,13 +119,15 @@
                 <div class="tabcontent" id="sre">
                     <div class="content-list d-flex justify-content-between">
                         <div class="content m-4">
-                            <div class="card" style="width: 18rem;">
+                            <a href="{{ route('party.id', $party) }}">
+                            <div class="card" id="cards" style="width: 18rem;">
                                 <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
                                 <div class="card-body d-flex">
-                                    <div class="card-title">{{Str::limit($party->title, 20) }}</div>
-                                    <a href="{{ route('party.id', $party) }}" class="btn btn-outline-dark m-auto">Rezervisi</a>
+                                    <div class="card-title">{{Str::limit($party->title, 30) }}</div>
+                                    
                                 </div>
                               </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -128,13 +136,14 @@
                 <div class="tabcontent" id="cet">
                     <div class="content-list d-flex justify-content-between">
                         <div class="content m-4">
-                            <div class="card" style="width: 18rem;">
+                            <a href="{{ route('party.id', $party) }}">
+                            <div class="card" id="cards" style="width: 18rem;">
                                 <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
                                 <div class="card-body d-flex">
-                                    <div class="card-title">{{Str::limit($party->title, 20) }}</div>
-                                    <a href="{{ route('party.id', $party) }}" class="btn btn-outline-dark m-auto">Rezervisi</a>
+                                    <div class="card-title">{{Str::limit($party->title, 30) }}</div>
                                 </div>
                               </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -143,13 +152,14 @@
                 <div class="tabcontent" id="pet">
                     <div class="content-list d-flex justify-content-between">
                         <div class="content m-4">
-                            <div class="card" style="width: 18rem;">
+                            <a href="{{ route('party.id', $party) }}">
+                            <div class="card" id="cards" style="width: 18rem;">
                                 <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
                                 <div class="card-body d-flex">
-                                    <div class="card-title">{{Str::limit($party->title, 20) }}</div>
-                                    <a href="{{ route('party.id', $party) }}" class="btn btn-outline-dark m-auto">Rezervisi</a>
+                                    <div class="card-title">{{Str::limit($party->title, 30) }}</div>
                                 </div>
                               </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -158,13 +168,14 @@
                 <div class="tabcontent" id="sub">
                     <div class="content-list d-flex justify-content-between">
                         <div class="content m-4">
-                            <div class="card" style="width: 18rem;">
+                            <a href="{{ route('party.id', $party) }}">
+                            <div class="card" id="cards" style="width: 18rem;">
                                 <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
                                 <div class="card-body d-flex">
-                                    <div class="card-title">{{Str::limit($party->title, 20) }}</div>
-                                    <a href="{{ route('party.id', $party) }}" class="btn btn-outline-dark m-auto">Rezervisi</a>
+                                    <div class="card-title">{{Str::limit($party->title, 30) }}</div>
                                 </div>
                               </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -173,13 +184,14 @@
                 <div class="tabcontent" id="ned">
                     <div class="content-list d-flex justify-content-between">
                         <div class="content m-4">
-                            <div class="card" style="width: 18rem;">
+                            <a href="{{ route('party.id', $party) }}">
+                            <div class="card" id="cards" style="width: 18rem;">
                                 <img class="card-img-top" src="/storage/uploads/{{ $party->image }}" alt="Card image cap">
                                 <div class="card-body d-flex">
-                                    <div class="card-title">{{Str::limit($party->title, 20) }}</div>
-                                    <a href="{{ route('party.id', $party) }}" class="btn btn-outline-dark m-auto">Rezervisi</a>
+                                    <div class="card-title">{{Str::limit($party->title, 30) }}</div>
                                 </div>
                               </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -198,7 +210,7 @@
         @foreach ($places as $place)
                 <div class="col align-self-center">
                     <a href="{{ route('place.id', $place->id) }}">
-                        <div class="card bg-dark text-white">
+                        <div class="card bg-dark text-white" id="cards">
                             <img class="card-img" src="/storage/uploads/{{ $place->image }}" alt="Card image">
                             <div class="card-img-overlay">
                             <h5 class="card-title">{{ $place->name }}</h5>
@@ -209,6 +221,27 @@
                     </a>
                 </div>
         @endforeach
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="row">
+            <a href="{{route('blogs')}}" class="text-decoration-none"><h3 class="m-4 text-dark">Zanimljivosti: <i class="fa fa-arrow-right" aria-hidden="true"></i></h3></a>
+        </div>
+        <div class="col-10 offset-1">
+            @foreach ($blogs as $blog)
+                <a href="{{ route('blog.id', $blog->id) }}">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="/storage/uploads/{{ $blog->image }}" style="object-fit:cover" height="180" width="894"  alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $blog->title }}</h5>
+                            <p class="card-text">{{ Str::limit(strip_tags($blog->blog, 30)) }}</p>
+                            <p class="card-text"><small class="text-muted">{{ $blog->created_at }}</small></p>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
     </div>
 
     <hr>

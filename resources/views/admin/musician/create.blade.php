@@ -36,6 +36,17 @@
                 @enderror
             </div>
 
+            <div class="form-group row">
+                <label for="socialMedia" class="col-md-4 col-form-label">Link rustvene mreze</label>
+                <input id="socialMedia" type="socialMedia" class="form-control @error('socialMedia') is-invalid @enderror" 
+                name="socialMedia" value="{{ old('socialMedia') }}" autocomplete="socialMedia" autofocus>
+                @error('socialMedia')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+
             <div class="form-gorup row">
                 <label for="image" class="col-md-4 col-form-label">Slika muzicara</label>
                 <input type="file" class="form-control-file" id="image" name="image">

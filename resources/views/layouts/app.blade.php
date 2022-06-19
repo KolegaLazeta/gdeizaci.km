@@ -19,6 +19,9 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @yield('background')
         <style>
+        #nav-menu:hover{
+            transform: scale(1.2);
+        }
         #body {
 	        background-image: url('/img/login.jpg');
             }
@@ -37,18 +40,18 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
 
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{route('home')}}">Pocetna</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{route('places')}}">Mesta za izlazak</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{route('blogs')}}">Novosti</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url('/about')}}">O Nama</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="nav-menu" href="{{route('home')}}">Pocetna</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="nav-menu" href="{{route('places')}}">Mesta za izlazak</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="nav-menu" href="{{route('blogs')}}">Novosti</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="nav-menu" href="{{route('about')}}">O Nama</a></li>
                         @if (Auth::user())
-                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{route('mybookings')}}">Moja rezervacija</a></li>
+                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" id="nav-menu" href="{{route('mybookings')}}">Moja rezervacija</a></li>
                         @endif
 
                     @if(auth()->check())
                         @if(auth()->user()->role == ('admin'))
 
-                        <div class="nav-item">
+                        <div class="nav-item" id="nav-menu">
                             <ul class="nav-item dropdown no-arrow" style="padding-top:16px">
                             
                                 <a class="nav-link" style="font-size: 0.75rem; font-weight: 800; letter-spacing: 0.0625em; text-transform: uppercase; color:white" href="#" id="userDropdown" role="button"
@@ -78,7 +81,8 @@
                                 document.getElementById('logout-form').submit()">{{ __('Odjavite se') }}</a>
                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
-                                </form></li>
+                                </form>
+                                </li>
                                 @endif
                         @endif
                     @else

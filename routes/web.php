@@ -38,6 +38,8 @@ Route::post('/mybookings/store', [\App\Http\Controllers\BookingController::class
 Route::get('/parties', [\App\Http\Controllers\PartyController::class, 'index'])->name('parties');
 Route::get('/parties/{party}', [\App\Http\Controllers\PartyController::class, 'show'])->name('party.id');
 
+Route::get('/about', [\App\Http\Controllers\HomeController::class, 'about'])->name('about');
+
 
 Route::middleware(['roles:admin', 'auth'])->group(function () {
     Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin');
